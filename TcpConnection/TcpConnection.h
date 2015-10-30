@@ -86,7 +86,7 @@ public:
 public:
     std::function<void(const std::string& strAddress, unsigned short port)> ConnectedCallback;
     std::function<void(const std::string& strAddress, unsigned short port)> DisconnectedCallback;
-    std::function<void(const std::string&)>				        	        MessageCallback;
+    std::function<void(const std::string&)>				    MessageCallback;
     std::function<void(int errorCode, const std::string& strErrorMsg)>      ExceptionCallback;
 
 protected:
