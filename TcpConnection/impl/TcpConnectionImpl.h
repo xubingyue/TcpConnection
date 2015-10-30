@@ -144,24 +144,24 @@ protected:
     
 
 protected:
-	bool							m_isConnected;
-	bool							m_isClosing;
+	bool                            m_isConnected;
+	bool                            m_isClosing;
 
-	boost::asio::ip::tcp::endpoint	m_endPoint;
+	boost::asio::ip::tcp::endpoint  m_endPoint;
 
-	boost::asio::io_service			m_ioServer;
-	boost::asio::ip::tcp::socket	m_socket;
+	boost::asio::io_service         m_ioServer;
+	boost::asio::ip::tcp::socket    m_socket;
 
-	boost::asio::streambuf			m_buffer;
+	boost::asio::streambuf          m_buffer;
 
 	//! to be written to server
-	std::deque<std::string>			m_messages;	
+	std::deque<std::string>         m_messages;
 
-	boost::asio::deadline_timer		m_heartBeatTimer;
-	boost::asio::deadline_timer		m_reconnectTimer;
+	boost::asio::deadline_timer     m_heartBeatTimer;
+	boost::asio::deadline_timer     m_reconnectTimer;
 
-	std::string						m_delimiter;
-	std::string						m_heartBeat;
+	std::string                     m_delimiter;
+	std::string                     m_heartBeat;
 
     size_t                          m_heartBeatTimeOut;
     size_t                          m_reconnectTimeOut;
